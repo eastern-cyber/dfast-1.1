@@ -70,9 +70,9 @@ export default function SideNavMain() {
                     <div className="lg:block hidden border-b lg:ml-2 mt-2" />
 
                     <div className="lg:block hidden text-[11px] text-gray-500">
-                        <p className="pt-4 px-2">About Kok Kok Kok Newgeneration SocialApp Network</p>
-                        <p className="pt-4 px-2">Kok Kok Kok for Good Governance & Transparency</p>
-                        <p className="pt-4 px-2">Safety & Terms Privacy Creator Portal Community Guidelines</p>
+                        <p className="pt-4 px-2">3K - ก๊อกก๊อกก๊อก โซเชียลแอ๊พยุคใหม่</p>
+                        <p className="pt-4 px-2">Kok Kok Kok Good Governance & Transparency - เพื่อความโปร่งใสและตรวจสอบได้</p>
+                        <p className="pt-4 px-2">Privacy & Safety Policy  - นโยบายความปลอดภัยและความเป็นส่วนตัว</p>
                         <p className="pt-4 px-2">© 2024 3K - Kok Kok Kok</p>
                     </div>
 
