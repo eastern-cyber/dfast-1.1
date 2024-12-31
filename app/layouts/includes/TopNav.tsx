@@ -48,7 +48,7 @@ export default function TopNav() {
                 <div className={`flex items-center justify-between gap-6 w-full px-4 mx-auto ${pathname === '/' ? 'max-w-[1150px]' : ''}`}>
 
                     <Link href="/">
-                        <img className="min-w-[115px] w-[115px]" src="/images/3k-logo.png"/>
+                        <img className="min-w-[115px] w-[115px]" src="/images/3k-logo-red-black.png"/>
                     </Link>
 
                     <div className="relative hidden md:flex items-center justify-end bg-[#F1F1F2] p-1 rounded-full max-w-[430px] w-full">
@@ -56,7 +56,7 @@ export default function TopNav() {
                                 type="text" 
                                 onChange={handleSearchName}
                                 className="w-full pl-3 my-2 bg-transparent placeholder-[#838383] text-[15px] focus:outline-none"
-                                placeholder="Search accounts"
+                                placeholder="ค้นหาผู้ใช้งาน"
                             />
 
                             {searchProfiles.length > 0 ?
@@ -88,7 +88,7 @@ export default function TopNav() {
                             className="flex items-center border rounded-sm py-[6px] hover:bg-gray-100 pl-1.5"
                         >
                             <AiOutlinePlus color="#000000" size="22"/>
-                            <span className="px-2 font-medium text-[15px]">Upload</span>
+                            <span className="px-2 font-medium text-[15px]">อัพโหลด</span>
                         </button>
 
                         {!userContext?.user?.id ? (
@@ -97,7 +97,7 @@ export default function TopNav() {
                                     onClick={() => setIsLoginOpen(true)}
                                     className="flex items-center bg-[#F02C56] text-white border rounded-md px-3 py-[6px]"
                                 >
-                                    <span className="whitespace-nowrap mx-4 font-medium text-[15px]">Log in</span>
+                                    <span className="whitespace-nowrap mx-4 font-medium text-[15px]">ล็อกอิน</span>
                                 </button>
                                 <BsThreeDotsVertical color="#161724" size="25"/>
                             </div>
@@ -123,7 +123,7 @@ export default function TopNav() {
                                                 className="flex items-center w-full justify-start py-3 px-2 hover:bg-gray-100 cursor-pointer"
                                             >
                                                 <BiUser size="20"/>
-                                                <span className="pl-2 font-semibold text-sm">Profile</span>
+                                                <span className="pl-2 font-semibold text-sm">โปรไฟล์</span>
                                             </button>
                                             <button 
                                                 onClick={async () => {
@@ -133,7 +133,7 @@ export default function TopNav() {
                                                 className="flex items-center justify-start w-full py-3 px-1.5 hover:bg-gray-100 border-t cursor-pointer"
                                             >
                                                 <FiLogOut size={20} />
-                                                <span className="pl-2 font-semibold text-sm">Log out</span>
+                                                <span className="pl-2 font-semibold text-sm">ล็อกเอ้าท์</span>
                                             </button>
                                         </div>
                                     ) : null}
