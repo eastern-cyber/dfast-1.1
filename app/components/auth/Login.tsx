@@ -26,8 +26,13 @@ export default function Login() {
         setError(null)
         let isError = false
 
+        const reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+
         if (!email) {
-            setError({ type: 'email', message: 'กรุณากรอกอีเมลล์ให้ถูกต้อง'})
+            setError({ type: 'email', message: 'กรุณากรอกอีเมลล์'})
+            isError = true
+        } else if (!reg.test(email)) {
+            setError({ type: 'email', message: 'รูปแบบอีเมลล์ไม่ถูกต้อง'})
             isError = true
         } else if (!password) {
             setError({ type: 'password', message: 'กรุณาระบุรหัสผ่าน'})
