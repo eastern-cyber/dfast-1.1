@@ -31,5 +31,8 @@
   "devDependencies": {
     "@types/debounce": "^1.2.4",
     "raw-loader": "^4.0.2"
-  }
+  },
+  "engines": {
+  "node": "18.x"
+}
 }
