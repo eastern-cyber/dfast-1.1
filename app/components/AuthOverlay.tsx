@@ -8,6 +8,7 @@ export default function AuthOverlay() {
     let { setIsLoginOpen } = useGeneralStore()
 
     let [isRegister, setIsRegister] = useState<boolean>(false)
+    let [isLogin, setIsLogin] = useState<boolean>(false)
 
     return (
         <>
@@ -26,12 +27,22 @@ export default function AuthOverlay() {
                     {isRegister ? <Register /> : <Login />}
 
                     <div className="absolute flex items-center justify-center py-5 left-0 bottom-0 border-t w-full">
-                        <span className="text-[14px] text-gray-600">Don’t have an account?</span>
+                        <span className="text-[14px] text-gray-600">{!isRegister ? 'ยังไม่มีบัญชีผู้ใช้งาน' : 'มีบัญชีผู้ใช้งานแล้ว'}</span>
 
                         <button onClick={() => setIsRegister(isRegister = !isRegister)} className="text-[14px] text-[#F02C56] font-semibold pl-1" >
-                            <span>{!isRegister ? 'Register' : 'log in'}</span>
+                            <span>{!isRegister ? 'ลงทะเบียน' : 'ล็อกอิน'}</span>
                         </button>
                     </div>
+
+                    {/* {isLogin ? <Login /> : <Register />}
+
+                    <div className="absolute flex items-center justify-center py-5 left-0 bottom-0 border-t w-full">
+                        <span className="text-[14px] text-gray-600">ยังไม่มีบัญชีผู้ใช้งาน?</span>
+
+                        <button onClick={() => setIsLogin(isLogin = !isLogin)} className="text-[14px] text-[#F02C56] font-semibold pl-1" >
+                            <span>{isLogin ? 'ล็อกอิน' : 'ลงทะเบียน'}</span>
+                        </button>
+                    </div> */}
 
                 </div>
             </div>

@@ -33,22 +33,22 @@ export default function Register() {
         const reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
 
         if (!name) {
-            setError({ type: 'name', message: 'A Name is required'})
+            setError({ type: 'name', message: 'กรุณาระบุชื่อผู้ใช้งาน'})
             isError = true
         } else if (!email) {
-            setError({ type: 'email', message: 'An Email is required'})
+            setError({ type: 'email', message: 'กรุณาระบุอีเมลล์'})
             isError = true
         } else if (!reg.test(email)) {
-            setError({ type: 'email', message: 'The Email is not valid'})
+            setError({ type: 'email', message: 'รูปแบบอีเมลล์ไม่ถูกต้อง'})
             isError = true
         } else if (!password) {
-            setError({ type: 'password', message: 'A Password is required'})
+            setError({ type: 'password', message: 'กรุณาตั้งรหัสผ่าน'})
             isError = true
         } else if (password.length < 8) {
-            setError({ type: 'password', message: 'The Password needs to be longer'})
+            setError({ type: 'password', message: 'รหัสผ่านต้องมีความยาวตั้งแต่ 8 ตัวอักษรขึ้นไป'})
             isError = true
         } else if (password != confirmPassword) {
-            setError({ type: 'password', message: 'The Passwords do not match'})
+            setError({ type: 'confirmPassword', message: 'รหัสผ่านที่ยืนยันไม่ตรงกัน'})
             isError = true
         }
         return isError
@@ -75,13 +75,13 @@ export default function Register() {
     return (
         <>
             <div>
-                <h1 className="text-center text-[28px] mb-4 font-bold">Register</h1>
+                <h1 className="text-center text-[28px] mb-4 font-bold">ลงทะเบียน</h1>
 
                 <div className="px-6 pb-2">
 
                     <TextInput 
                         string={name}
-                        placeholder="Name"
+                        placeholder="ชื่อผู้ใช้งาน"
                         onUpdate={setName}
                         inputType="text"
                         error={showError('name')}
@@ -93,7 +93,7 @@ export default function Register() {
 
                     <TextInput 
                         string={email}
-                        placeholder="Email address"
+                        placeholder="อีเมลล์"
                         onUpdate={setEmail}
                         inputType="email"
                         error={showError('email')}
@@ -104,7 +104,7 @@ export default function Register() {
                 <div className="px-6 pb-2">
                     <TextInput 
                         string={password}
-                        placeholder="Password"
+                        placeholder="รหัสผ่าน"
                         onUpdate={setPassword}
                         inputType="password"
                         error={showError('password')}
@@ -114,7 +114,7 @@ export default function Register() {
                 <div className="px-6 pb-2">
                     <TextInput 
                         string={confirmPassword}
-                        placeholder="Confirm Password"
+                        placeholder="ยืนยันรหัสผ่าน"
                         onUpdate={setConfirmPassword}
                         inputType="password"
                         error={showError('confirmPassword')}
@@ -130,7 +130,7 @@ export default function Register() {
                             ${(!name || !email || !password || !confirmPassword) ? 'bg-gray-200' : 'bg-[#F02C56]'}
                         `}
                     >
-                        {loading ? <BiLoaderCircle className="animate-spin" color="#ffffff" size={25} /> : 'Register'}
+                        {loading ? <BiLoaderCircle className="animate-spin" color="#ffffff" size={25} /> : 'ลงทะเบียน'}
                     </button>
                 </div>
             </div>
