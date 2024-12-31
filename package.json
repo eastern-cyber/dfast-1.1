@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@types/debounce": "^1.2.4",
-    "canvas": "2.10.1",
+    "canvas": "^3.0.0",
     "raw-loader": "^4.0.2"
   }
 }
