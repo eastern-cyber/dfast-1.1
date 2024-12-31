@@ -4,8 +4,8 @@ import './globals.css'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'TikTok Clone',
-  description: 'TikTok Clone',
+  title: '3K v.1.1',
+  description: 'ก๊อกๆๆ - KokKokKok ',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
