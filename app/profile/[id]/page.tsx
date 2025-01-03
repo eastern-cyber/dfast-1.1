@@ -57,11 +57,11 @@ export default function Profile({ params }: ProfilePageTypes) {
                                     className="flex item-center rounded-md py-1.5 px-3.5 mt-3 text-[15px] font-semibold border hover:bg-gray-100"
                                 >
                                     <BsPencil className="mt-0.5 mr-1" size="18"/>
-                                    <span>Edit profile</span>
+                                    <span>แก้ไขโปรไฟล์</span>
                                 </button>
                             ) : (
                                 <button className="flex item-center rounded-md py-1.5 px-8 mt-3 text-[15px] text-white font-semibold bg-[#F02C56]">
-                                    Follow
+                                    ติดตาม
                                 </button>
                             )}
                         </div>
