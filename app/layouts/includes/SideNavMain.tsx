@@ -28,13 +28,21 @@ export default function SideNavMain() {
                 <div className="lg:w-full w-[55px] mx-auto">
                     <Link href="/">
                         <MenuItem 
-                            iconString="For You" 
+                            iconString="หน้าหลัก" 
                             colorString={pathname == '/' ? '#F02C56' : ''} 
                             sizeString="25"
                         />
                     </Link>
-                    <MenuItem iconString="Following" colorString="#000000" sizeString="25"/>
-                    <MenuItem iconString="LIVE" colorString="#000000" sizeString="25"/>
+                    <MenuItem iconString="ที่ติดตาม" colorString="#000000" sizeString="25"/>
+                    <MenuItem iconString="ไลฟ์สด" colorString="#000000" sizeString="25"/>
+                    <Link href="https://youlive.world/">
+                        <MenuItem 
+                            iconString="ยอดนิยม" 
+                            colorString={pathname == 'https://youlive.world/' ? '#F02C56' : ''} 
+                            sizeString="25"
+                        />
+                    </Link>
+
 
                     <div className="border-b lg:ml-2 mt-2" />
                     <h3 className="lg:block hidden text-xs text-gray-600 font-semibold pt-4 pb-2 px-2">บัญชีผู้ใช้ที่แนะนำ</h3>
