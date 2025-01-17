@@ -35,7 +35,7 @@ export default function SideNavMain() {
                     </Link>
                     <MenuItem iconString="ที่ติดตาม" colorString="#000000" sizeString="25"/>
                     <MenuItem iconString="ไลฟ์สด" colorString="#000000" sizeString="25"/>
-                    <Link href="https://youlive.world/">
+                    <Link href="https://youlive.world/shorts/baifern-bah_xeq7v19gylw4FxC.html">
                         <MenuItem 
                             iconString="ยอดนิยม" 
                             colorString={pathname == 'https://youlive.world/' ? '#F02C56' : ''} 
