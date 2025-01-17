@@ -5,6 +5,7 @@ import { RiGroupLine } from "react-icons/ri"
 import { BsCameraVideo } from "react-icons/bs"
 import { MenuItemTypes } from "@/app/types"
 import { BiBookmarkAlt } from "react-icons/bi"
+import { GrDocumentVideo } from "react-icons/gr";
 
 export default function MenuItem({ iconString, colorString, sizeString }: MenuItemTypes) {
 
@@ -12,7 +13,9 @@ export default function MenuItem({ iconString, colorString, sizeString }: MenuIt
         if (iconString == 'หน้าหลัก') return <AiOutlineHome size={sizeString} color={colorString} />
         if (iconString == 'ที่ติดตาม') return <RiGroupLine size={sizeString} color={colorString} />
         if (iconString == 'ไลฟ์สด') return <BsCameraVideo size={sizeString} color={colorString} />
-        if (iconString == 'ยอดนิยม') return <BiBookmarkAlt  size={sizeString} color={colorString} />
+        if (iconString == 'ยอดนิยม') return <BiBookmarkAlt size={sizeString} color={colorString} />
+        if (iconString == 'ข่าว') return <GrDocumentVideo size={sizeString} color={colorString} />
+
 
     }
 
