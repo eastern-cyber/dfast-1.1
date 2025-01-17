@@ -49,6 +49,13 @@ export default function SideNavMain() {
                             sizeString="25"
                         />
                     </Link>
+                    <Link href="https://youlive.world/menu9">
+                        <MenuItem 
+                            iconString="คลิปสั้น" 
+                            colorString={pathname == 'https://youlive.world/' ? '#F02C56' : ''} 
+                            sizeString="25"
+                        />
+                    </Link>
 
 
                     <div className="border-b lg:ml-2 mt-2" />
