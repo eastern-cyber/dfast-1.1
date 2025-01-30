@@ -95,7 +95,7 @@ export default function Post({ params }: PostPageTypes) {
                                     autoPlay
                                     controls
                                     loop
-                                    muted
+                                    // muted
                                     className="h-screen mx-auto" 
                                     src={useCreateBucketUrl(postById.video_url)}
                                 />

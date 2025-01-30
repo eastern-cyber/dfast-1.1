@@ -59,7 +59,7 @@ export default function PostMain({ post }: PostMainCompTypes) {
                                 id={`video-${post.id}`}
                                 loop
                                 controls
-                                muted
+                                // muted
                                 className="rounded-xl object-cover mx-auto h-full" 
                                 src={useCreateBucketUrl(post?.video_url)}
                             />

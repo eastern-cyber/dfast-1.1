@@ -118,7 +118,10 @@ export default function PostMainLikes({ post }: PostMainLikesCompTypes) {
                         <span className="text-xs text-gray-800 font-semibold">{comments?.length}</span>
                     </button>
 
-                    <button className="text-center">
+                    <button 
+                        onClick={() => router.push(`/post/${post?.id}/${post?.profile?.user_id}`)} 
+                        className="text-center"
+                    >
                         <div className="rounded-full bg-gray-200 p-2 cursor-pointer">
                             <FaShare size="25"/>
                         </div>
