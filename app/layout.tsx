@@ -4,7 +4,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: '3K v.1.1',
+  title: '3K v.1.2.0',
   description: 'ก๊อกๆๆ - KokKokKok ',
 }
 

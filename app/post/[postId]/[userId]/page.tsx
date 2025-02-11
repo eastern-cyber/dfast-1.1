@@ -92,8 +92,8 @@ export default function Post({ params }: PostPageTypes) {
                         <div className="bg-black bg-opacity-70 lg:min-w-[480px] z-10 relative">
                             {postById?.video_url ? (
                                 <video 
+                                    // controls
                                     autoPlay
-                                    controls
                                     loop
                                     // muted
                                     className="h-screen mx-auto" 
