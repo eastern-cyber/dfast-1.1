@@ -11,6 +11,8 @@ import { useGeneralStore } from "@/app/stores/general"
 import useCreateBucketUrl from "@/app/hooks/useCreateBucketUrl"
 import { RandomUsers } from "@/app/types"
 import useSearchProfilesByName from "@/app/hooks/useSearchProfilesByName";
+import Image from "next/image";
+
 
 export default function TopNav() {    
     const userContext = useUser()
@@ -47,9 +49,24 @@ export default function TopNav() {
             <div id="TopNav" className="fixed bg-white z-30 flex items-center w-full border-b h-[60px]">
                 <div className={`flex items-center justify-between gap-6 w-full px-4 mx-auto ${pathname === '/' ? 'max-w-[1150px]' : ''}`}>
 
-                    <Link href="/">
-                        <img className="min-w-[115px] w-[115px]" src="/images/3k-logo-red-black.png"/>
-                    </Link>
+                <Link href="/" className='flex items-center font-black text-2xl gap-0.8 group'>
+                <div className="w-[240px] h-[70px] flex items-center"> {/* Use flex to align items in the same line */}
+                    <Image 
+                    src="/images/3k-logo_272x146.png" 
+                    alt="3K"
+                    width={110} 
+                    height={70} 
+                    />
+                    <p className="mt-2 mb-1 ml-4"> {/* Add margin to the left of the text */}
+                    <span className="text-[#eb1c24]">ก๊อกๆๆ</span>
+                    <br />
+                    <span className="text-[18px] font-light">v.1.2.0</span>
+                    </p>
+                </div>
+                </Link>
+                    {/* <Link href="/">
+                        <img className="min-w-[115px] w-[115px]" src="/images/3k-logo_272x146.png"/>
+                    </Link> */}
 
                     <div className="relative hidden md:flex items-center justify-end bg-[#F1F1F2] p-1 rounded-full max-w-[430px] w-full">
                             <input 

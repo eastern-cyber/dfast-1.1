@@ -116,22 +116,35 @@ export default function Upload() {
                                 <BiSolidCloudUpload size="40" color="#b3b3b1"/>
                                 <p className="mt-4 text-[17px]">Select video to upload</p>
                                 <p className="mt-1.5 text-gray-500 text-[13px]">Or drag and drop a file</p>
-                                <p className="mt-12 text-gray-400 text-sm">MP4</p>
+                                <p className="mt-12 text-gray-400 text-sm">mp4,mov</p>
                                 <p className="mt-2 text-gray-400 text-[13px]">Up to 30 minutes</p>
                                 <p className="mt-2 text-gray-400 text-[13px]">Less than 2 GB</p>
                                 <label 
                                     htmlFor="fileInput" 
                                     className="px-2 py-1.5 mt-8 text-white text-[15px] w-[80%] bg-[#F02C56] rounded-sm cursor-pointer"
                                 >
-                                    Select file
+                                    เลือกไฟล์
                                 </label>
-                                <input 
+                                {/* <input 
                                     type="file" 
                                     id="fileInput"
                                     onChange={onChange}
                                     hidden 
                                     accept=".mp4" 
+                                /> */}
+                                <input 
+                                    type="file" 
+                                    id="fileInput"
+                                    onChange={onChange}
+                                    hidden 
+                                    accept="image/*, video/*" 
                                 />
+                                {/* <input 
+                                    type="text" 
+                                    id="youtubeInput"
+                                    placeholder="Paste YouTube Link"
+                                    onChange={handleYouTubeLink}
+                                /> */}
                             </label>
                         :
                             <div
