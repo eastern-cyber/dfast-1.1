@@ -47,20 +47,22 @@ export default function TopNav() {
     return (
         <>
             <div id="TopNav" className="fixed bg-white z-30 flex items-center w-full border-b h-[60px]">
-                <div className={`flex items-center justify-between gap-6 w-full px-4 mx-auto ${pathname === '/' ? 'max-w-[1150px]' : ''}`}>
-
-                <Link href="/" className='flex items-center font-black text-2xl gap-0.8 group'>
-                <div className="w-[240px] h-[70px] flex items-center"> {/* Use flex to align items in the same line */}
+                <div className={`flex items-center justify-between gap-4 w-full px-3 sm:px-4 mx-auto ${pathname === '/' ? 'max-w-[1150px]' : 'max-w-xs sm:max-w-full'}`}>
+                {/* <div className={`flex items-center justify-between gap-6 w-full px-4 mx-auto ${pathname === '/' ? 'max-w-[1150px]' : ''}`}> */}
+                <Link href="/" className='flex items-center font-black text-xl gap-2 group'>
+                <div className="w-[130px] sm:w-[150px] h-[60px] flex items-center">
                     <Image 
                     src="/images/3k-logo_800x700.png" 
                     alt="3K"
-                    width={80} 
-                    height={55} 
+                    width={70} 
+                    height={45} 
                     />
-                    <p className="mt-3 mb-2 ml-4"> {/* Add margin to the left of the text */}
+                    <p className="ml-2 text-sm sm:text-base">
+                    {/* <p className="mt-3 mb-2 ml-4"> Add margin to the left of the text */}
                     <span className="text-[#330099]">ก๊อกๆๆ</span>
                     <br />
-                    <span className="text-[18px] font-light">v.1.2.1</span>
+                    <span className="text-[14px] sm:text-[18px] font-light">v.1.2.1</span>
+                    {/* <span className="text-[18px] font-light">v.1.2.1</span> */}
                     </p>
                 </div>
                 </Link>
@@ -99,13 +101,13 @@ export default function TopNav() {
                             </div>
                     </div>
 
-                    <div className="flex items-center gap-3 ">
+                    <div className="flex items-center gap-1 sm:gap-2">
                         <button 
                             onClick={() => goTo()}
                             className="flex items-center border rounded-sm py-[6px] hover:bg-gray-100 pl-1.5"
                         >
-                            <AiOutlinePlus color="#000000" size="22"/>
-                            <span className="px-2 font-medium text-[15px]">อัพโหลด</span>
+                            <AiOutlinePlus color="#000000" size="20"/>
+                            <span className="px-2 font-medium">อัพโหลด</span>
                         </button>
 
                         {!userContext?.user?.id ? (
@@ -114,8 +116,8 @@ export default function TopNav() {
                                     onClick={() => setIsLoginOpen(true)}
                                     className="flex items-center bg-[#F02C56] text-white border rounded-md px-3 py-[6px]"
                                 >
-                                    <span className="whitespace-nowrap mx-4 font-medium text-[15px]">ล็อกอิน</span>
-                                </button>
+                        <span className="whitespace-nowrap mx-2 sm:mx-4 font-medium">ล็อกอิน</span>
+                        </button>
                                 <BsThreeDotsVertical color="#161724" size="25"/>
                             </div>
                         ) : (
