@@ -52,15 +52,15 @@ export default function TopNav() {
                 <Link href="/" className='flex items-center font-black text-2xl gap-0.8 group'>
                 <div className="w-[240px] h-[70px] flex items-center"> {/* Use flex to align items in the same line */}
                     <Image 
-                    src="/images/3k-logo_272x146.png" 
+                    src="/images/3k-logo_800x700.png" 
                     alt="3K"
-                    width={110} 
-                    height={70} 
+                    width={80} 
+                    height={55} 
                     />
-                    <p className="mt-2 mb-1 ml-4"> {/* Add margin to the left of the text */}
-                    <span className="text-[#eb1c24]">ก๊อกๆๆ</span>
+                    <p className="mt-3 mb-2 ml-4"> {/* Add margin to the left of the text */}
+                    <span className="text-[#330099]">ก๊อกๆๆ</span>
                     <br />
-                    <span className="text-[18px] font-light">v.1.2.0</span>
+                    <span className="text-[18px] font-light">v.1.2.1</span>
                     </p>
                 </div>
                 </Link>
